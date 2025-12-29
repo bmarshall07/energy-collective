@@ -1,20 +1,17 @@
 ﻿import "./globals.css";
-import { APP } from "../lib/config";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: APP.name,
-  description: APP.tagline,
+  title: "Energy Collective",
+  description: "Subsurface Experts Network",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <header style={{ padding: "20px", borderBottom: "1px solid #1F2937" }}>
-          <h1>{APP.name}</h1>
-          <p style={{ color: "#9CA3AF" }}>{APP.tagline}</p>
-        </header>
-        <main style={{ padding: "40px" }}>{children}</main>
+      <body className="bg-slate-950 text-slate-100">
+        <Navbar />
+        <main className="mx-auto max-w-6xl px-4 py-10">{children}</main>
       </body>
     </html>
   );
