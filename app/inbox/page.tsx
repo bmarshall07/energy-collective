@@ -1,6 +1,6 @@
 ﻿"use client";
 import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase/client";
+import { supabase } from "../../lib/supabase/client";
 
 export default function Inbox() {
   const [threads, setThreads] = useState<any[]>([]);
@@ -40,3 +40,4 @@ export default function Inbox() {
     </div>
   );
 }
+
